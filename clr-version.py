@@ -77,8 +77,8 @@ corHeader = IMAGE_COR20_HEADER.parse(GetCorHeader())
 metadata = STORAGESIGNATURE.parse(GetMetadata(corHeader.MetaData))
 
 '''
-    CLR2-3: b'v2.0.50727'
-    CLR4: b'v4.0.30319'
+CLR2-3: 'v2.0.50727'
+CLR4: 'v4.0.30319'
 '''
 print( f'clr version: {metadata.pVersion}' )
 
@@ -92,4 +92,7 @@ it will not run in Windows 7 without `.net framework 4` installed.
 maintain compatibility with `.net framework 3.5` at development time, 
 replacing the `metadata.version` field in the program (unrecommended)
 will allow use in `.net framework 3.5` environments.
+
+
+https://learn.microsoft.com/troubleshoot/developer/dotnet/framework/general/sgen-mixed-mode-assembly-built-v2-0-50727
 '''
